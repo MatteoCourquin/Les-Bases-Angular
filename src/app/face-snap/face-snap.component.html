@@ -1,0 +1,12 @@
+<div class="face-snap-card">
+    <h2>{{ faceSnap.title }}</h2>
+    
+    <!-- Les crochets servent a lire la propriétés meme quand elles ne sont pas en String -->
+    <img [src]="faceSnap.imgUrl" [alt]="faceSnap.title">
+    <p>Mis en ligne le {{ faceSnap.createdDate }}</p>
+    <p>{{ faceSnap.description }}</p>
+    <p>
+        <button (click)="likeSnap()">{{ textButton }}</button>
+        Nb snaps : {{ faceSnap.like }}
+    </p>
+</div>
