@@ -1,0 +1,31 @@
+<div class="face-snap-card">
+    <h2>{{ faceSnap.title | titlecase }}</h2>
+    
+    <!-- Les crochets servent a lire la propriétés meme quand elles ne sont pas en String -->
+    <img [src]="faceSnap.imgUrl" [alt]="faceSnap.title">
+    <p>Mis en ligne le {{ faceSnap.createdDate | date: 'le dd/MM/yy à HH:mm' }}</p>
+    <p>{{ faceSnap.description }}</p>
+
+    <!-- Condition ng If -->
+    <p *ngIf="faceSnap.location">Photo prise à : {{ faceSnap.location }}</p>
+    <p>
+        <button [ngClass]="{ liked: textButton === 'Unlike' }" (click)="likeSnap()">{{ textButton }}</button>
+        <span [ngStyle]="{ color: 'rgb(0,' + faceSnap.like + ', 0)' }">Nb snaps : {{ faceSnap.like }}</span>
+    </p>
+
+    <!-- Les pipes -->
+
+    <!-- Formatez du texte -->
+    <h2>{{ 'mon super titre' | titlecase }}</h2>
+
+    <!-- Formatez des dates -->
+    <p>{{ faceSnap.createdDate | date: 'medium' }}</p>
+
+    <!-- Formatez des chiffres -->
+    <!-- nombres -->
+    <p>{{ 43.1267487256 | number: '1.0-2' }}</p>
+    <!-- pourcentages -->
+    <p>{{ 0.336 | percent: '1.0-2' }}</p>
+    <!-- argents -->
+    <p>{{ 334.36 | currency: 'EUR' : 'code' }}</p>
+</div>

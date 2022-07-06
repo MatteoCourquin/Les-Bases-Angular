@@ -1,0 +1,12 @@
+
+<!-- Boucle ng For -->
+
+<div class="container-face-snap">
+    <app-face-snap  
+    *ngFor="let faceSnapOfArray of faceSnaps" 
+    [faceSnap]="faceSnapOfArray"
+    >
+    </app-face-snap>
+</div>
+
+<!-- <app-face-snap [faceSnap]="mySnap" *ngIf="mySnap.like < 4"></app-face-snap> -->

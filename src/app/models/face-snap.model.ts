@@ -20,15 +20,11 @@ export class FaceSnap {
 
     // Meme chose qu'au dessus ⬇️
 
-
-    constructor(
-        public title: string, 
-        public description: string, 
-        public createdDate: Date, 
-        public like: number, 
-        public imgUrl: string,
-        public location?: string
-        ){
-            
-        }
+    id!: number;
+    title!: string;
+    description!: string;
+    createdDate!: Date;
+    like!: number;
+    imgUrl!: string;
+    location?: string;
 }
