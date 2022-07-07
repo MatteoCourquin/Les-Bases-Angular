@@ -20,18 +20,18 @@ export class SingleFaceSnapComponent implements OnInit {
 
     ngOnInit() {
         // Initialiser les données du composant
-        this.textButton = 'Like';
+        this.textButton = '♡';
         const faceSnapId = +this.route.snapshot.params['id'];
         this.faceSnap = this.faceSnapsService.getFaceSnapsById(faceSnapId);
     }
 
     likeSnap() {
-        if (this.textButton === 'Like') {
-            this.faceSnapsService.snapFaceSnapById(this.faceSnap.id, 'Like');
-            this.textButton = 'Unlike';
+        if (this.textButton === '♡') {
+            this.faceSnapsService.snapFaceSnapById(this.faceSnap.id, '♡');
+            this.textButton = '♥';
         } else {
-            this.faceSnapsService.snapFaceSnapById(this.faceSnap.id, 'Unlike');
-            this.textButton = 'Like';
+            this.faceSnapsService.snapFaceSnapById(this.faceSnap.id, '♥');
+            this.textButton = '♡';
         }
     }
 }

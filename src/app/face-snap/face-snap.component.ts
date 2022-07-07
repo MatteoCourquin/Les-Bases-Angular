@@ -19,16 +19,16 @@ export class FaceSnapComponent implements OnInit {
 
     ngOnInit() {
         // Initialiser les données du composant
-        this.textButton = 'Like';
+        this.textButton = '♡';
     }
 
     likeSnap() {
-        if (this.textButton === 'Like') {
-            this.faceSnapsService.snapFaceSnapById(this.faceSnap.id, 'Like');
-            this.textButton = 'Unlike';
+        if (this.textButton === '♡') {
+            this.faceSnapsService.snapFaceSnapById(this.faceSnap.id, '♡');
+            this.textButton = '♥';
         } else {
-            this.faceSnapsService.snapFaceSnapById(this.faceSnap.id, 'Unlike');
-            this.textButton = 'Like';
+            this.faceSnapsService.snapFaceSnapById(this.faceSnap.id, '♥');
+            this.textButton = '♡';
         }
     }
 

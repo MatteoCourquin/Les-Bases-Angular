@@ -25,6 +25,5 @@ export class FaceSnap {
     description!: string;
     createdDate!: Date;
     like!: number;
-    imgUrl!: string;
     location?: string;
 }

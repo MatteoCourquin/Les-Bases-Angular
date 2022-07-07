@@ -14,7 +14,6 @@ export class FaceSnapsService {
             description: 'Photo de Matteo',
             createdDate: new Date(),
             like: 28,
-            imgUrl: 'https://picsum.photos/1000/1000',
             location: 'Paris'
         },
         {
@@ -23,7 +22,6 @@ export class FaceSnapsService {
             description: 'Photo de Jean',
             createdDate: new Date(),
             like: 164,
-            imgUrl: 'https://picsum.photos/1000/1000',
         },
         {
             id: 3,
@@ -31,7 +29,6 @@ export class FaceSnapsService {
             description: 'Photo de Lucie',
             createdDate: new Date(),
             like: 683,
-            imgUrl: 'https://picsum.photos/1000/1000',
             location: 'Vannes'
         },
         {
@@ -40,7 +37,6 @@ export class FaceSnapsService {
             description: 'Photo de Nicolas',
             createdDate: new Date(),
             like: 83,
-            imgUrl: 'https://picsum.photos/1000/1000',
             location: 'Lille'
         },
         {
@@ -49,7 +45,6 @@ export class FaceSnapsService {
             description: 'Photo de Nolan',
             createdDate: new Date(),
             like: 718,
-            imgUrl: 'https://picsum.photos/1000/1000',
         },
         {
             id: 6,
@@ -57,7 +52,38 @@ export class FaceSnapsService {
             description: 'Photo de Zoe',
             createdDate: new Date(),
             like: 947,
-            imgUrl: 'https://picsum.photos/1000/1000',
+            location: 'Angers'
+        },
+        {
+            id: 7,
+            title: 'Lilly',
+            description: 'Photo de Lilly',
+            createdDate: new Date(),
+            like: 947,
+            location: 'Angers'
+        },
+        {
+            id: 8,
+            title: 'Vincent',
+            description: 'Photo de Vincent',
+            createdDate: new Date(),
+            like: 947,
+            location: 'Angers'
+        },
+        {
+            id: 9,
+            title: 'Patrice',
+            description: 'Photo de Patrice',
+            createdDate: new Date(),
+            like: 947,
+            location: 'Angers'
+        },
+        {
+            id: 10,
+            title: 'Caro',
+            description: 'Photo de Caro',
+            createdDate: new Date(),
+            like: 947,
             location: 'Angers'
         },
     ];
@@ -77,10 +103,10 @@ export class FaceSnapsService {
         }
     }
 
-    snapFaceSnapById(faceSnapsId: number, snapType: 'Like' | 'Unlike'): void {
+    snapFaceSnapById(faceSnapsId: number, snapType: '♡' | '♥'): void {
 
         const faceSnap = this.getFaceSnapsById(faceSnapsId);
-        snapType === 'Like' ? faceSnap.like++ : faceSnap.like--;
+        snapType === '♡' ? faceSnap.like++ : faceSnap.like--;
 
     }
 }

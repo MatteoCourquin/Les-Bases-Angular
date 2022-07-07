@@ -1,6 +1,8 @@
-<div class="face-snap-card">
-    <h2>{{ faceSnap.title | titlecase }}</h2>
-    <p>{{ faceSnap.description }}</p>
-
-    <button (click)="onViewFaceSnap()">VIEW</button>
+<div class="face-snap-card face-snap-card-preview">
+    <div>
+        <h2>{{ faceSnap.title | titlecase }}</h2>
+        <p>{{ faceSnap.description }}</p>
+        <button (click)="onViewFaceSnap()">view</button>
+    </div>
+    <img src="https://picsum.photos/id/1{{faceSnap.id}}/1000/500" [alt]="faceSnap.title">
 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { interval, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -7,18 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
-    ngOnInit() {
-    }
-    // mySnap!: FaceSnap;
+    // Déclarer un Observable
+    interval$!: Observable<number>;
 
-    // ngOnInit() {
-    //     this.mySnap = new FaceSnap(
-    //         'Matteo',
-    //         'Photo de Matteo',
-    //         new Date(),
-    //         6,
-    //         'https://picsum.photos/1000/1000',
-    //         'paris'
-    //     );
-    // }
+    ngOnInit() {
+        this.interval$ = interval(3000)
+    }
 }

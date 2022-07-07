@@ -1,17 +1,20 @@
+<a class="arrow-return" routerLink="/facesnaps">←</a>
 <div class="face-snap-card">
-    <a routerLink="/facesnaps"><-Back</a>
     <h2>{{ faceSnap.title | titlecase }}</h2>
     
     <!-- Les crochets servent a lire la propriétés meme quand elles ne sont pas en String -->
-    <img [src]="faceSnap.imgUrl" [alt]="faceSnap.title">
-    <p>Mis en ligne le {{ faceSnap.createdDate | date: 'le dd/MM/yy à HH:mm' }}</p>
-    <p>{{ faceSnap.description }}</p>
+    <!-- <img [src]="faceSnap.imgUrl" [alt]="faceSnap.title"> -->
+    <img src="https://picsum.photos/id/{{faceSnap.id}}/1000/500" [alt]="faceSnap.title">
+    <div class="face-snap-card-infos">
+        <p>{{ faceSnap.createdDate | date: 'dd/MM/yy à HH:mm' }}</p>
 
-    <!-- Condition ng If -->
-    <p *ngIf="faceSnap.location">Photo prise à : {{ faceSnap.location }}</p>
+        <!-- Condition ng If -->
+        <p *ngIf="faceSnap.location">📍 {{ faceSnap.location }}</p>
+    </div>
+    <p class="face-snap-card-description">{{ faceSnap.description }}</p>
+
     <p>
-        <button [ngClass]="{ liked: textButton === 'Unlike' }" (click)="likeSnap()">{{ textButton }}</button>
-        <span [ngStyle]="{ color: 'rgb(0,' + faceSnap.like + ', 0)' }">Nb snaps : {{ faceSnap.like }}</span>
+        <span [ngClass]="{ liked: textButton === '♥' }" (click)="likeSnap()">{{ textButton }} {{ faceSnap.like }}</span>
     </p>
 
     <!-- Les pipes -->
