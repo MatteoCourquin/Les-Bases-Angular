@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FaceSnap } from '../models/face-snap.model';
 import { FaceSnapsService } from '../service/face-snaps-service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-face-snap',
@@ -13,7 +14,8 @@ export class FaceSnapComponent implements OnInit {
     // Initilaiser un nom de variable et son type
     textButton!: string;
 
-    constructor(private faceSnapsService: FaceSnapsService) {}
+    constructor(private faceSnapsService: FaceSnapsService,
+                private router: Router) {}
 
     ngOnInit() {
         // Initialiser les données du composant
@@ -28,5 +30,9 @@ export class FaceSnapComponent implements OnInit {
             this.faceSnapsService.snapFaceSnapById(this.faceSnap.id, 'Unlike');
             this.textButton = 'Like';
         }
+    }
+
+    onViewFaceSnap() {
+        this.router.navigateByUrl(`facesnaps/${this.faceSnap.id}`);
     }
 }
