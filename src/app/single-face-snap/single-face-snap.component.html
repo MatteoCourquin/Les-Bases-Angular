@@ -1,5 +1,5 @@
 <a class="arrow-return" routerLink="/facesnaps">←</a>
-<div class="face-snap-card">
+<div class="face-snap-card" *ngIf="faceSnap$ | async as faceSnap">
     <h2>{{ faceSnap.title | titlecase }}</h2>
     
     <!-- Les crochets servent a lire la propriétés meme quand elles ne sont pas en String -->

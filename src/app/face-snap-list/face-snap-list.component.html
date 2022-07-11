@@ -3,7 +3,7 @@
 
 <div class="container-face-snap">
     <app-face-snap  
-    *ngFor="let faceSnapOfArray of faceSnaps" 
+    *ngFor="let faceSnapOfArray of faceSnaps$ | async" 
     [faceSnap]="faceSnapOfArray"
     >
     </app-face-snap>

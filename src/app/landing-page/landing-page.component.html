@@ -1,6 +1,37 @@
 <div class="landing-block">
-    <img src="assets/snapface.png" alt="Snapface logo">
-    <div class="landing-links">
-      <button (click)="onContinue()">Continuer vers Snapface</button>
-    </div>
+  
+  <!-- <form
+    class="form-newsletter"
+    #emailForm="ngForm"
+    (ngSubmit)="onSubmitForm(emailForm)"
+  >
+    <h2>Inscrivez vous à la Newsletter !</h2>
+
+    <label for="name">Nom</label>
+    <input type="text" id="name" [(ngModel)]="userName" name="userName" />
+
+    <label for="last-name">Prénom</label>
+    <input
+      type="text"
+      id="last-name"
+      [(ngModel)]="userLastName"
+      name="userLastName"
+    />
+
+    <label for="email-input">Mail</label>
+    <input
+      type="email"
+      id="email-input"
+      [(ngModel)]="userEmail"
+      name="userEmail"
+    />
+
+    <button type="submit">S'inscrire</button>
+  </form> -->
+
+  <img src="assets/snapface.png" alt="Snapface logo" />
+  <div class="landing-links">
+    <button (click)="onContinue()">Continuer vers Snapface</button>
   </div>
+
+</div>
