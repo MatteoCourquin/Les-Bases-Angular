@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FaceSnap } from '../models/face-snap.model';
-import { FaceSnapsService } from '../service/face-snaps-service';
+import { FaceSnap } from '../../../core/models/face-snap.model';
+import { FaceSnapsService } from '../../../core/service/face-snaps-service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -22,7 +22,7 @@ export class FaceSnapComponent implements OnInit {
         this.textButton = '♡';
     }
 
-    likeSnap() {
+    onSnap() {
         if (this.textButton === '♡') {
             this.faceSnapsService.snapFaceSnapById(this.faceSnap.id, '♡');
             this.textButton = '♥';

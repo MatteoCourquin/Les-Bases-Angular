@@ -17,13 +17,19 @@ button {
   margin-right: 20px;
   outline: none;
   font-weight: 500;
+  transition: .3s;
   &:active {
     transform: translate(1px, 1px);
     box-shadow: lightgray 0 0 5px;
   }
+  &:hover{
+    background-color: rgb(137, 137, 137);
+    color: white;
+  }
 }
 
 .face-snap-card {
+  position: relative;
   box-sizing: border-box;
   width: 50%;
   margin: 20px auto;

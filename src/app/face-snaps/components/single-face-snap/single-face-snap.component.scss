@@ -1,0 +1,16 @@
+.arrow-return{
+    text-decoration: none;
+    color: black;
+    position: absolute;
+    font-size: 30px;
+    top: 10px;
+    left: -10px;
+    cursor: pointer;
+    transition: .3s ease-out;
+    &:hover{
+        left: -20px;
+    }
+}
+.like-button{
+    cursor: pointer;
+}
