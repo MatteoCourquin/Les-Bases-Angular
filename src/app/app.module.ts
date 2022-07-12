@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { LandingPageModule } from './landing-page/landing-page.module';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { LandingPageModule } from './landing-page/landing-page.module';
     AppRoutingModule,
     CoreModule,
     LandingPageModule,
+    AuthModule,
   ],
   // Changer la langue de l'application:
   providers: [],
